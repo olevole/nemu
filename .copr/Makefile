@@ -15,7 +15,7 @@ build: dirs
 	-DNM_WITH_NETWORK_MAP \
 	-DNM_WITH_DBUS \
 	-DNM_SAVEVM_SNAPSHOTS && \
-	make package && \
+	cpack -G RPM --config ./CPackSourceConfig.cmake && \
 	cp *.src.rpm $(outdir)
 
 srpm: deps build
