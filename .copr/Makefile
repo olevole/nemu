@@ -2,7 +2,15 @@ MKDIR_P = mkdir -p
 BUILD_DIR = build
 
 deps:
-	dnf -y install cmake
+	dnf -y install cmake gcc \
+		ncurses-devel \
+		sqlite-devel \
+		libusbx-devel \
+		systemd-devel \
+		libxml2-devel \
+		libarchive-devel \
+		graphviz-devel \
+		dbus-devel
 
 dirs:
 	${MKDIR_P} ${BUILD_DIR}
