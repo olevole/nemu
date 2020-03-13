@@ -12,9 +12,9 @@ build: dirs
 	cd ${BUILD_DIR} && \
 	cmake ../ \
 	-DCPACK_RPM_PACKAGE_SOURCES=ON \
-	-DNM_WITH_NETWORK_MAP \
-	-DNM_WITH_DBUS \
-	-DNM_SAVEVM_SNAPSHOTS && \
+	-DNM_WITH_NETWORK_MAP=ON \
+	-DNM_WITH_DBUS=ON \
+	-DNM_SAVEVM_SNAPSHOTS=ON && \
 	cpack -G RPM --config ./CPackSourceConfig.cmake && \
 	cp *.src.rpm $(outdir)
 
